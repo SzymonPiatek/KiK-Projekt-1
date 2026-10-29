@@ -14,10 +14,10 @@ python main.py
 
 ### Menu
 
-=========== SZYFR PODSTAWIENIOWY ===========
-1. Szyfruj tekst
-2. Deszyfruj tekst
-0. Wyjście
+> =========== SZYFR PODSTAWIENIOWY ===========
+> 1. Szyfruj tekst
+> 2. Deszyfruj tekst
+> 0. Wyjście
 
 
 Po wybraniu opcji 1 lub 2 program prosi o tekst i klucz, a następnie

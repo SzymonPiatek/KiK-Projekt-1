@@ -51,14 +51,15 @@ szyfrowy: DEFGHIJKLMNOPQRSTUVWXYZABC
 
 
 Wielkość liter jest zachowywana.
+
 Znaki spoza A-Z (spacje, cyfry, interpunkcja, polskie znaki) nie są zmieniane.
+
 Klucze różniące się o wielokrotność 26 dają ten sam wynik (np. 3 i 29).
 
 Przykład: Hello, World! z kluczem 3 daje Khoor, Zruog!.
 
-Obsługa błędów
-Pusty tekst - program prosi o ponowne wpisanie.
-Klucz pusty lub niebędący liczbą całkowitą (np. abc, 3.5) - komunikat
-o błędzie i ponowne pytanie o klucz.
-Nieprawidłowa opcja w menu - komunikat i powrót do menu.
-Ctrl+C / Ctrl+D - program kończy się bez śladu stosu.
+#### Obsługa błędów
+- Pusty tekst - program prosi o ponowne wpisanie.
+- Klucz pusty lub niebędący liczbą całkowitą (np. abc, 3.5) - komunikat o błędzie i ponowne pytanie o klucz.
+- Nieprawidłowa opcja w menu - komunikat i powrót do menu.
+- Ctrl+C / Ctrl+D - program kończy się bez śladu stosu.

@@ -11,6 +11,25 @@ Wymagany Python 3.10 lub nowszy.
 
 python main.py
 
+## Zależności
+Sam program korzysta wyłącznie z biblioteki standardowej. Plik
+requirements.txt zawiera paczki potrzebne do uruchomienia testów (pytest
+wraz z jego zależnościami).
+
+Instalacja w wirtualnym środowisku:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Uruchomienie testów:
+
+```bash
+pytest
+```
+
 
 ### Menu
 

@@ -74,10 +74,37 @@ def run_operation(operation, title: str) -> None:
     print(f"\nWynik: {operation(text, key)}")
 
 
+def print_menu() -> None:
+    """Wyświetla menu główne."""
+    print("\n=========== SZYFR PODSTAWIENIOWY ===========")
+    print("1. Szyfruj tekst")
+    print("2. Deszyfruj tekst")
+    print("0. Wyjście")
+
+
 def main() -> None:
-    """Punkt wejścia programu (na razie pusty szkielet)."""
-    print("Kryptosystem - szyfr podstawieniowy")
+    """Pętla główna programu z menu wyboru."""
+    actions = {
+        "1": (encrypt, "SZYFROWANIE"),
+        "2": (decrypt, "DESZYFROWANIE"),
+    }
+
+    while True:
+        print_menu()
+        choice = input("Wybierz opcję: ").strip()
+
+        if choice == "0":
+            print("Do widzenia!")
+            return
+        if choice in actions:
+            operation, title = actions[choice]
+            run_operation(operation, title)
+        else:
+            print("Błąd: nieprawidłowa opcja. Wpisz 1, 2 lub 0.")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (KeyboardInterrupt, EOFError):
+        print("\nPrzerwano. Do widzenia!")

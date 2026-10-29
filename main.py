@@ -48,6 +48,32 @@ def decrypt(text: str, key: int) -> str:
     return text.translate(build_translation_table(cipher_alphabet, ALPHABET))
 
 
+def ask_for_text(prompt: str) -> str:
+    """Prosi o niepusty tekst, powtarzając pytanie aż do skutku."""
+    while True:
+        text = input(prompt)
+        if text.strip():
+            return text
+        print("Błąd: tekst nie może być pusty. Spróbuj ponownie.")
+
+
+def ask_for_key() -> int:
+    """Prosi o klucz, powtarzając pytanie aż do podania poprawnego."""
+    while True:
+        try:
+            return parse_key(input("Podaj klucz (liczba całkowita): "))
+        except InvalidKeyError as error:
+            print(f"Błąd: {error}")
+
+
+def run_operation(operation, title: str) -> None:
+    """Wspólny przebieg szyfrowania i deszyfrowania: tekst, klucz, wynik."""
+    print(f"\n--- {title} ---")
+    text = ask_for_text("Podaj tekst: ")
+    key = ask_for_key()
+    print(f"\nWynik: {operation(text, key)}")
+
+
 def main() -> None:
     """Punkt wejścia programu (na razie pusty szkielet)."""
     print("Kryptosystem - szyfr podstawieniowy")

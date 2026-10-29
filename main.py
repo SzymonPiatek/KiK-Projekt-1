@@ -22,6 +22,13 @@ def parse_key(raw_key: str) -> int:
         ) from None
 
 
+def build_cipher_alphabet(key: int) -> str:
+    """Buduje alfabet szyfrowy: alfabet jawny przesunięty cyklicznie o key."""
+    # Modulo sprawia, że działają też liczby ujemne i większe niż 26
+    shift = key % len(ALPHABET)
+    return ALPHABET[shift:] + ALPHABET[:shift]
+
+
 def main() -> None:
     """Punkt wejścia programu (na razie pusty szkielet)."""
     print("Kryptosystem - szyfr podstawieniowy")

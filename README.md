@@ -5,10 +5,8 @@ podstawieniowym.
 
 ### Klucz
 
-Klucz podaje użytkownik. Może być:
-
-- **a) liczbą całkowitą** - alfabet szyfrowy jest przesunięty cyklicznie o tę liczbę,
-- **b) słowem kluczowym** - min. 8 liter, tworzy własny alfabet szyfrowy.
+Klucz podaje użytkownik jako **liczbę całkowitą** (także ujemną). Alfabet
+szyfrowy jest przesunięty cyklicznie o tę liczbę.
 
 ### Uruchomienie
 
